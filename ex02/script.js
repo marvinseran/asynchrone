@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
             fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
                 .then(response => response.json())
                 .then(data => {
-                    requestDiv.innerHTML = `<strong>${word}</strong> est ajouté depuis ce pays: ${country} </br> Définition : ${data[0].meanings[0].definitions[0].definition}`;
+                    requestDiv.innerHTML = `<strong>${word}</strong> est ajouté depuis ce pays: ${country} </br> Definition : ${data[0].meanings[0].definitions[0].definition}`;
                     resultContainer.appendChild(requestDiv);
 
                     previousResults.push(requestDiv.innerHTML);
